@@ -134,7 +134,7 @@ export default function IndustriesPageContent() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative border-b border-[#1e1e1e] bg-[#0a0a0a] py-16 lg:py-20 overflow-hidden">
+      <section className="relative border-b border-vertex-border bg-vertex-bg py-16 lg:py-20 overflow-hidden">
         <Image
           src="/images/hot-rolling.jpeg"
           alt=""
@@ -149,16 +149,16 @@ export default function IndustriesPageContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
               Industries Served
             </p>
             <h1
-              className="mb-4 max-w-3xl text-5xl font-extrabold uppercase leading-tight text-[#f0f0f0] sm:text-6xl"
+              className="mb-4 max-w-3xl text-5xl font-extrabold uppercase leading-tight text-vertex-primary sm:text-6xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               Built for Demanding Industrial Environments
             </h1>
-            <p className="max-w-2xl text-base leading-relaxed text-[#888888]">
+            <p className="max-w-2xl text-base leading-relaxed text-vertex-secondary">
               We serve steel plants, rolling mills, process industries, maintenance contractors, and
               allied engineering units — with a primary focus on the Bellary–Vijayanagar–Koppal
               industrial belt in Karnataka.
@@ -174,7 +174,7 @@ export default function IndustriesPageContent() {
         return (
           <section
             key={industry.name}
-            className={`border-b border-[#1e1e1e] py-16 lg:py-24 ${isEven ? "bg-[#111111]" : "bg-[#0a0a0a]"}`}
+            className={`border-b border-vertex-border py-16 lg:py-24 ${isEven ? "bg-vertex-surface" : "bg-vertex-bg"}`}
           >
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
@@ -187,22 +187,22 @@ export default function IndustriesPageContent() {
                   transition={{ duration: 0.55, ease: "easeOut" }}
                   className={isEven ? "lg:order-2" : ""}
                 >
-                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                     <Icon size={20} />
                   </div>
-                  <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
                     {industry.category}
                   </p>
                   <h2
-                    className="mb-4 text-4xl font-extrabold uppercase leading-tight text-[#f0f0f0] sm:text-5xl"
+                    className="mb-4 text-4xl font-extrabold uppercase leading-tight text-vertex-primary sm:text-5xl"
                     style={{ fontFamily: "var(--font-barlow-condensed)" }}
                   >
                     {industry.name}
                   </h2>
-                  <p className="mb-4 text-sm leading-relaxed text-[#888888]">
+                  <p className="mb-4 text-sm leading-relaxed text-vertex-secondary">
                     {industry.description}
                   </p>
-                  <p className="text-sm leading-relaxed text-[#888888]">
+                  <p className="text-sm leading-relaxed text-vertex-secondary">
                     {industry.detail}
                   </p>
 
@@ -211,7 +211,7 @@ export default function IndustriesPageContent() {
                     {industry.products.map((p) => (
                       <span
                         key={p}
-                        className="rounded-sm border border-[#1a56db]/25 bg-[#1a56db]/8 px-3 py-1 text-xs font-medium text-[#1a56db]"
+                        className="rounded-sm border border-vertex-accent/25 bg-vertex-accent/8 px-3 py-1 text-xs font-medium text-vertex-accent"
                       >
                         {p}
                       </span>
@@ -228,7 +228,7 @@ export default function IndustriesPageContent() {
                   className={isEven ? "lg:order-1" : ""}
                 >
                   {/* Industry image */}
-                  <div className="relative mb-4 aspect-[16/9] overflow-hidden rounded-sm border border-[#1e1e1e]">
+                  <div className="relative mb-4 aspect-[16/9] overflow-hidden rounded-sm border border-vertex-border">
                     <Image
                       src={industry.image}
                       alt={industry.name}
@@ -239,9 +239,9 @@ export default function IndustriesPageContent() {
                   </div>
 
                   <div
-                    className={`rounded-sm border border-[#1e1e1e] p-6 ${isEven ? "bg-[#0a0a0a]" : "bg-[#111111]"}`}
+                    className={`rounded-sm border border-vertex-border p-6 ${isEven ? "bg-vertex-bg" : "bg-vertex-surface"}`}
                   >
-                    <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-[#555]">
+                    <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-vertex-muted">
                       Key Application Challenges
                     </p>
                     <ul className="space-y-3">
@@ -252,17 +252,17 @@ export default function IndustriesPageContent() {
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.3, delay: ci * 0.07 }}
-                          className="flex items-start gap-3 text-sm text-[#888888]"
+                          className="flex items-start gap-3 text-sm text-vertex-secondary"
                         >
-                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#1a56db]" />
+                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-vertex-accent" />
                           {c}
                         </motion.li>
                       ))}
                     </ul>
-                    <div className="mt-6 border-t border-[#1e1e1e] pt-5">
+                    <div className="mt-6 border-t border-vertex-border pt-5">
                       <Link
                         href="/contact"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1a56db] transition-colors hover:text-[#f0f0f0]"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-vertex-accent transition-colors hover:text-vertex-primary"
                       >
                         Discuss your requirement
                         <ArrowRight size={13} />
@@ -277,7 +277,7 @@ export default function IndustriesPageContent() {
       })}
 
       {/* ── Support industries (4 compact) ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#111111] py-16 lg:py-24">
+      <section className="border-b border-vertex-border bg-vertex-surface py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -286,11 +286,11 @@ export default function IndustriesPageContent() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-10"
           >
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
               Also Serving
             </p>
             <h2
-              className="text-4xl font-extrabold uppercase text-[#f0f0f0] sm:text-5xl"
+              className="text-4xl font-extrabold uppercase text-vertex-primary sm:text-5xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               Adjacent &amp; Support Sectors
@@ -307,33 +307,33 @@ export default function IndustriesPageContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08, ease: "easeOut" }}
-                  className="flex flex-col rounded-sm border border-[#1e1e1e] bg-[#0a0a0a] p-5"
+                  className="flex flex-col rounded-sm border border-vertex-border bg-vertex-bg p-5"
                 >
                   <div className="mb-3 flex items-center gap-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                       <Icon size={16} />
                     </div>
                     <h3
-                      className="text-lg font-bold uppercase text-[#f0f0f0]"
+                      className="text-lg font-bold uppercase text-vertex-primary"
                       style={{ fontFamily: "var(--font-barlow-condensed)" }}
                     >
                       {industry.name}
                     </h3>
                   </div>
-                  <p className="mb-3 flex-1 text-sm leading-relaxed text-[#888888]">
+                  <p className="mb-3 flex-1 text-sm leading-relaxed text-vertex-secondary">
                     {industry.description}
                   </p>
-                  <div className="rounded-sm border border-[#1e1e1e] bg-[#111111] p-3">
-                    <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-[#555]">
+                  <div className="rounded-sm border border-vertex-border bg-vertex-surface p-3">
+                    <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-vertex-muted">
                       What We Provide
                     </p>
-                    <p className="text-xs leading-relaxed text-[#888888]">{industry.value}</p>
+                    <p className="text-xs leading-relaxed text-vertex-secondary">{industry.value}</p>
                   </div>
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {industry.products.map((p) => (
                       <span
                         key={p}
-                        className="rounded-sm border border-[#1a56db]/20 bg-[#1a56db]/6 px-2.5 py-0.5 text-xs font-medium text-[#1a56db]"
+                        className="rounded-sm border border-vertex-accent/20 bg-vertex-accent/6 px-2.5 py-0.5 text-xs font-medium text-vertex-accent"
                       >
                         {p}
                       </span>
@@ -347,7 +347,7 @@ export default function IndustriesPageContent() {
       </section>
 
       {/* ── Regional focus ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#0a0a0a] py-16 lg:py-24">
+      <section className="border-b border-vertex-border bg-vertex-bg py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
 
@@ -358,19 +358,19 @@ export default function IndustriesPageContent() {
               viewport={{ once: true }}
               transition={{ duration: 0.55, ease: "easeOut" }}
             >
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                 <MapPin size={18} />
               </div>
-              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
                 Regional Focus
               </p>
               <h2
-                className="mb-5 text-4xl font-extrabold uppercase leading-tight text-[#f0f0f0] sm:text-5xl"
+                className="mb-5 text-4xl font-extrabold uppercase leading-tight text-vertex-primary sm:text-5xl"
                 style={{ fontFamily: "var(--font-barlow-condensed)" }}
               >
                 The Bellary–Vijayanagar–Koppal Belt
               </h2>
-              <div className="space-y-4 text-sm leading-relaxed text-[#888888]">
+              <div className="space-y-4 text-sm leading-relaxed text-vertex-secondary">
                 <p>
                   Northern Karnataka — anchored by Ballari, Vijayanagar, and Koppal — is one of
                   India's most significant steel and heavy industry concentrations, driven by the
@@ -402,7 +402,7 @@ export default function IndustriesPageContent() {
               className="space-y-8"
             >
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#555]">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-vertex-muted">
                   Areas We Serve
                 </p>
                 <div className="space-y-2">
@@ -413,12 +413,12 @@ export default function IndustriesPageContent() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: i * 0.06 }}
-                      className="flex items-start gap-3 rounded-sm border border-[#1e1e1e] bg-[#111111] px-4 py-3"
+                      className="flex items-start gap-3 rounded-sm border border-vertex-border bg-vertex-surface px-4 py-3"
                     >
-                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[#1a56db]" />
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-vertex-accent" />
                       <div>
-                        <span className="text-sm font-semibold text-[#f0f0f0]">{area.name}</span>
-                        <span className="ml-2 text-xs text-[#555]">— {area.detail}</span>
+                        <span className="text-sm font-semibold text-vertex-primary">{area.name}</span>
+                        <span className="ml-2 text-xs text-vertex-muted">— {area.detail}</span>
                       </div>
                     </motion.div>
                   ))}
@@ -426,7 +426,7 @@ export default function IndustriesPageContent() {
               </div>
 
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#555]">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-vertex-muted">
                   Key Customer Segments
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -437,7 +437,7 @@ export default function IndustriesPageContent() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.25, delay: i * 0.05 }}
-                      className="rounded-sm border border-[#1a56db]/25 bg-[#1a56db]/8 px-3 py-1.5 text-xs font-medium text-[#1a56db]"
+                      className="rounded-sm border border-vertex-accent/25 bg-vertex-accent/8 px-3 py-1.5 text-xs font-medium text-vertex-accent"
                     >
                       {account}
                     </motion.span>
@@ -450,7 +450,7 @@ export default function IndustriesPageContent() {
       </section>
 
       {/* ── Products cross-reference ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#111111] py-16 lg:py-20">
+      <section className="border-b border-vertex-border bg-vertex-surface py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -460,12 +460,12 @@ export default function IndustriesPageContent() {
             className="mb-8"
           >
             <h2
-              className="text-3xl font-extrabold uppercase text-[#f0f0f0] sm:text-4xl"
+              className="text-3xl font-extrabold uppercase text-vertex-primary sm:text-4xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               Our Product Range
             </h2>
-            <p className="mt-2 text-sm text-[#888888]">
+            <p className="mt-2 text-sm text-vertex-secondary">
               Three focused product lines covering the core component requirements of our markets.
             </p>
           </motion.div>
@@ -484,17 +484,17 @@ export default function IndustriesPageContent() {
                 >
                   <Link
                     href={product.href}
-                    className="group flex items-center justify-between rounded-sm border border-[#1e1e1e] bg-[#0a0a0a] px-5 py-4 transition-colors hover:border-[#1a56db]/40"
+                    className="group flex items-center justify-between rounded-sm border border-vertex-border bg-vertex-bg px-5 py-4 transition-colors hover:border-vertex-accent/40"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                         <Icon size={16} />
                       </div>
-                      <span className="text-sm font-semibold text-[#f0f0f0]">{product.name}</span>
+                      <span className="text-sm font-semibold text-vertex-primary">{product.name}</span>
                     </div>
                     <ArrowRight
                       size={14}
-                      className="shrink-0 text-[#333] transition-colors group-hover:text-[#1a56db]"
+                      className="shrink-0 text-vertex-muted transition-colors group-hover:text-vertex-accent"
                     />
                   </Link>
                 </motion.div>
@@ -505,7 +505,7 @@ export default function IndustriesPageContent() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#0a0a0a] py-16 lg:py-20">
+      <section className="bg-vertex-bg py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -516,26 +516,26 @@ export default function IndustriesPageContent() {
           >
             <div>
               <h2
-                className="text-3xl font-extrabold uppercase text-[#f0f0f0] sm:text-4xl"
+                className="text-3xl font-extrabold uppercase text-vertex-primary sm:text-4xl"
                 style={{ fontFamily: "var(--font-barlow-condensed)" }}
               >
                 Industry-Specific Enquiry
               </h2>
-              <p className="mt-1 text-sm text-[#888888]">
+              <p className="mt-1 text-sm text-vertex-secondary">
                 Tell us your industry and application — we will identify the right product.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 shrink-0">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-sm bg-[#1a56db] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#1e40af]"
+                className="inline-flex items-center gap-2 rounded-sm bg-vertex-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-vertex-accent-hover"
               >
                 Send Enquiry
                 <ArrowRight size={14} />
               </Link>
               <Link
                 href="/products"
-                className="inline-flex items-center gap-2 rounded-sm border border-[#2a2a2a] px-5 py-2.5 text-sm font-semibold text-[#888888] transition-colors hover:border-[#555] hover:text-[#f0f0f0]"
+                className="inline-flex items-center gap-2 rounded-sm border border-vertex-border-subtle px-5 py-2.5 text-sm font-semibold text-vertex-secondary transition-colors hover:border-vertex-muted hover:text-vertex-primary"
               >
                 View Products
               </Link>

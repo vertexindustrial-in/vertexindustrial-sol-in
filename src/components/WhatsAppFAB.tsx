@@ -15,7 +15,7 @@ export default function WhatsAppFAB() {
       transition={{ duration: 0.35, delay: 1.2, ease: "easeOut" }}
       whileHover={{ scale: 1.06, transition: { duration: 0.15 } }}
       whileTap={{ scale: 0.94 }}
-      className="fixed bottom-5 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#16a34a] text-white shadow-lg shadow-black/40 transition-colors hover:bg-[#15803d] sm:h-auto sm:w-auto sm:gap-2 sm:rounded-full sm:px-4 sm:py-3"
+      className="fixed bottom-5 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-vertex-green text-white shadow-lg shadow-black/40 transition-colors hover:bg-vertex-green-hover sm:h-auto sm:w-auto sm:gap-2 sm:rounded-full sm:px-4 sm:py-3"
     >
       <MessageCircle size={20} className="shrink-0" />
       <span className="sr-only sm:not-sr-only sm:text-sm sm:font-semibold">

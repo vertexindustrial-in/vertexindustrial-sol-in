@@ -34,9 +34,9 @@ const productOptions = [
 ];
 
 const inputBase =
-  "w-full rounded-sm border bg-[#0a0a0a] px-4 py-3 text-sm text-[#f0f0f0] placeholder-[#444] outline-none transition-colors focus:border-[#1a56db] focus:ring-1 focus:ring-[#1a56db]/30";
+  "w-full rounded-sm border bg-vertex-bg px-4 py-3 text-sm text-vertex-primary placeholder:text-vertex-muted outline-none transition-colors focus:border-vertex-accent focus:ring-1 focus:ring-vertex-accent/30";
 
-const labelBase = "mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#888888]";
+const labelBase = "mb-1.5 block text-xs font-semibold uppercase tracking-wider text-vertex-secondary";
 
 export default function EnquiryForm({ defaultProduct = "", className }: EnquiryFormProps) {
   const [isSuccess, setIsSuccess] = useState(false);
@@ -61,21 +61,21 @@ export default function EnquiryForm({ defaultProduct = "", className }: EnquiryF
   if (isSuccess) {
     return (
       <div className={cn("flex flex-col items-center justify-center gap-4 py-16 text-center", className)}>
-        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#1a56db]/15 text-[#1a56db]">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-vertex-accent/15 text-vertex-accent">
           <CheckCircle size={28} />
         </div>
         <h3
-          className="text-2xl font-extrabold uppercase text-[#f0f0f0]"
+          className="text-2xl font-extrabold uppercase text-vertex-primary"
           style={{ fontFamily: "var(--font-barlow-condensed)" }}
         >
           Enquiry Received
         </h3>
-        <p className="max-w-sm text-sm text-[#888888]">
+        <p className="max-w-sm text-sm text-vertex-secondary">
           Thank you. We will review your requirement and get back to you shortly.
         </p>
         <button
           onClick={() => setIsSuccess(false)}
-          className="mt-2 text-xs font-semibold text-[#1a56db] transition-colors hover:text-[#f0f0f0]"
+          className="mt-2 text-xs font-semibold text-vertex-accent transition-colors hover:text-vertex-primary"
         >
           Submit another enquiry
         </button>
@@ -92,26 +92,28 @@ export default function EnquiryForm({ defaultProduct = "", className }: EnquiryF
       {/* Row 1: Name + Company */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
-          <label className={labelBase}>
-            Name <span className="text-[#1a56db]">*</span>
+          <label htmlFor="ef-name" className={labelBase}>
+            Name <span className="text-vertex-accent">*</span>
           </label>
           <input
+            id="ef-name"
             {...register("name")}
             placeholder="Your name"
-            className={cn(inputBase, errors.name ? "border-red-500/60" : "border-[#1e1e1e]")}
+            className={cn(inputBase, errors.name ? "border-red-500/60" : "border-vertex-border")}
           />
           {errors.name && (
             <p className="mt-1.5 text-xs text-red-400">{errors.name.message}</p>
           )}
         </div>
         <div>
-          <label className={labelBase}>
-            Company Name <span className="text-[#1a56db]">*</span>
+          <label htmlFor="ef-company" className={labelBase}>
+            Company Name <span className="text-vertex-accent">*</span>
           </label>
           <input
+            id="ef-company"
             {...register("company")}
             placeholder="Your company"
-            className={cn(inputBase, errors.company ? "border-red-500/60" : "border-[#1e1e1e]")}
+            className={cn(inputBase, errors.company ? "border-red-500/60" : "border-vertex-border")}
           />
           {errors.company && (
             <p className="mt-1.5 text-xs text-red-400">{errors.company.message}</p>
@@ -122,26 +124,28 @@ export default function EnquiryForm({ defaultProduct = "", className }: EnquiryF
       {/* Row 2: Phone + Email */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
-          <label className={labelBase}>
-            Phone Number <span className="text-[#1a56db]">*</span>
+          <label htmlFor="ef-phone" className={labelBase}>
+            Phone Number <span className="text-vertex-accent">*</span>
           </label>
           <input
+            id="ef-phone"
             {...register("phone")}
             type="tel"
             placeholder="+91 XXXXX XXXXX"
-            className={cn(inputBase, errors.phone ? "border-red-500/60" : "border-[#1e1e1e]")}
+            className={cn(inputBase, errors.phone ? "border-red-500/60" : "border-vertex-border")}
           />
           {errors.phone && (
             <p className="mt-1.5 text-xs text-red-400">{errors.phone.message}</p>
           )}
         </div>
         <div>
-          <label className={labelBase}>Email Address</label>
+          <label htmlFor="ef-email" className={labelBase}>Email Address</label>
           <input
+            id="ef-email"
             {...register("email")}
             type="email"
             placeholder="you@company.com"
-            className={cn(inputBase, errors.email ? "border-red-500/60" : "border-[#1e1e1e]")}
+            className={cn(inputBase, errors.email ? "border-red-500/60" : "border-vertex-border")}
           />
           {errors.email && (
             <p className="mt-1.5 text-xs text-red-400">{errors.email.message}</p>
@@ -151,15 +155,16 @@ export default function EnquiryForm({ defaultProduct = "", className }: EnquiryF
 
       {/* Product */}
       <div>
-        <label className={labelBase}>
-          Product / Service of Interest <span className="text-[#1a56db]">*</span>
+        <label htmlFor="ef-product" className={labelBase}>
+          Product / Service of Interest <span className="text-vertex-accent">*</span>
         </label>
         <select
+          id="ef-product"
           {...register("product")}
           className={cn(
             inputBase,
             "appearance-none cursor-pointer",
-            errors.product ? "border-red-500/60" : "border-[#1e1e1e]"
+            errors.product ? "border-red-500/60" : "border-vertex-border"
           )}
         >
           <option value="" disabled>
@@ -178,12 +183,13 @@ export default function EnquiryForm({ defaultProduct = "", className }: EnquiryF
 
       {/* Message */}
       <div>
-        <label className={labelBase}>Message / Requirements</label>
+        <label htmlFor="ef-message" className={labelBase}>Message / Requirements</label>
         <textarea
+          id="ef-message"
           {...register("message")}
           rows={4}
           placeholder="Describe your requirement — product type, size, quantity, application…"
-          className={cn(inputBase, "resize-none border-[#1e1e1e]")}
+          className={cn(inputBase, "resize-none border-vertex-border")}
         />
       </div>
 
@@ -191,7 +197,7 @@ export default function EnquiryForm({ defaultProduct = "", className }: EnquiryF
       <button
         type="submit"
         disabled={isSubmitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-[#1a56db] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#1e40af] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:min-w-[180px]"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-vertex-accent px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-vertex-accent-hover disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:min-w-[180px]"
       >
         {isSubmitting ? (
           <>

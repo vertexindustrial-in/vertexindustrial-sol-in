@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
+import ThemeProvider from "@/components/ThemeProvider";
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
@@ -91,11 +92,20 @@ export default function RootLayout({
       lang="en"
       className={`${barlowCondensed.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col bg-[#0a0a0a] text-[#f0f0f0]">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppFAB />
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{const t=localStorage.getItem('vertex-theme');if(t==='light')document.documentElement.classList.add('light')}catch(e){}`,
+          }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col bg-vertex-bg text-vertex-primary">
+        <ThemeProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <WhatsAppFAB />
+        </ThemeProvider>
       </body>
     </html>
   );

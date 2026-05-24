@@ -44,7 +44,7 @@ const differentiators = [
 
 export default function WhyVertexSection() {
   return (
-    <section className="bg-[#0a0a0a] py-20 lg:py-28">
+    <section className="bg-vertex-bg py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div
@@ -54,13 +54,10 @@ export default function WhyVertexSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="mb-12 max-w-xl"
         >
-          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
             Why Vertex
           </p>
-          <h2
-            className="text-4xl font-extrabold uppercase text-[#f0f0f0] sm:text-5xl"
-            style={{ fontFamily: "var(--font-barlow-condensed)" }}
-          >
+          <h2 className="text-4xl font-extrabold uppercase text-vertex-primary sm:text-5xl">
             What Sets Us Apart
           </h2>
         </motion.div>
@@ -77,18 +74,15 @@ export default function WhyVertexSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.08, ease: "easeOut" }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="rounded-sm border border-[#1e1e1e] bg-[#111111] p-6 transition-colors hover:border-[#1a56db]/30"
+                className="rounded-sm border border-vertex-border bg-vertex-surface p-6 transition-colors hover:border-vertex-accent/30"
               >
-                <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+                <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                   <Icon size={17} />
                 </div>
-                <h3
-                  className="mb-2 text-lg font-bold uppercase text-[#f0f0f0]"
-                  style={{ fontFamily: "var(--font-barlow-condensed)" }}
-                >
+                <h3 className="mb-2 text-lg font-bold uppercase text-vertex-primary">
                   {item.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-[#888888]">{item.description}</p>
+                <p className="text-sm leading-relaxed text-vertex-secondary">{item.description}</p>
               </motion.div>
             );
           })}

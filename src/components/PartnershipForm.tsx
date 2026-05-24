@@ -34,10 +34,10 @@ const partnershipTypes = [
 ];
 
 const inputBase =
-  "w-full rounded-sm border bg-[#0a0a0a] px-4 py-3 text-sm text-[#f0f0f0] placeholder-[#444] outline-none transition-colors focus:border-[#1a56db] focus:ring-1 focus:ring-[#1a56db]/30";
+  "w-full rounded-sm border bg-vertex-bg px-4 py-3 text-sm text-vertex-primary placeholder:text-vertex-muted outline-none transition-colors focus:border-vertex-accent focus:ring-1 focus:ring-vertex-accent/30";
 
 const labelBase =
-  "mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#888888]";
+  "mb-1.5 block text-xs font-semibold uppercase tracking-wider text-vertex-secondary";
 
 export default function PartnershipForm() {
   const [isSuccess, setIsSuccess] = useState(false);
@@ -59,22 +59,22 @@ export default function PartnershipForm() {
   if (isSuccess) {
     return (
       <div className="flex flex-col items-center justify-center gap-4 py-16 text-center">
-        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#1a56db]/15 text-[#1a56db]">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-vertex-accent/15 text-vertex-accent">
           <CheckCircle size={28} />
         </div>
         <h3
-          className="text-2xl font-extrabold uppercase text-[#f0f0f0]"
+          className="text-2xl font-extrabold uppercase text-vertex-primary"
           style={{ fontFamily: "var(--font-barlow-condensed)" }}
         >
           Application Received
         </h3>
-        <p className="max-w-sm text-sm text-[#888888]">
+        <p className="max-w-sm text-sm text-vertex-secondary">
           Thank you for your interest. We will review your application and be in touch within
           2–3 business days.
         </p>
         <button
           onClick={() => setIsSuccess(false)}
-          className="mt-2 text-xs font-semibold text-[#1a56db] transition-colors hover:text-[#f0f0f0]"
+          className="mt-2 text-xs font-semibold text-vertex-accent transition-colors hover:text-vertex-primary"
         >
           Submit another application
         </button>
@@ -87,26 +87,28 @@ export default function PartnershipForm() {
       {/* Name + Company */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
-          <label className={labelBase}>
-            Full Name <span className="text-[#1a56db]">*</span>
+          <label htmlFor="pf-name" className={labelBase}>
+            Full Name <span className="text-vertex-accent">*</span>
           </label>
           <input
+            id="pf-name"
             {...register("name")}
             placeholder="Your name"
-            className={cn(inputBase, errors.name ? "border-red-500/60" : "border-[#1e1e1e]")}
+            className={cn(inputBase, errors.name ? "border-red-500/60" : "border-vertex-border")}
           />
           {errors.name && (
             <p className="mt-1.5 text-xs text-red-400">{errors.name.message}</p>
           )}
         </div>
         <div>
-          <label className={labelBase}>
-            Company / Organisation <span className="text-[#1a56db]">*</span>
+          <label htmlFor="pf-company" className={labelBase}>
+            Company / Organisation <span className="text-vertex-accent">*</span>
           </label>
           <input
+            id="pf-company"
             {...register("company")}
             placeholder="Your company"
-            className={cn(inputBase, errors.company ? "border-red-500/60" : "border-[#1e1e1e]")}
+            className={cn(inputBase, errors.company ? "border-red-500/60" : "border-vertex-border")}
           />
           {errors.company && (
             <p className="mt-1.5 text-xs text-red-400">{errors.company.message}</p>
@@ -117,27 +119,29 @@ export default function PartnershipForm() {
       {/* City + Phone */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
-          <label className={labelBase}>
-            City &amp; State <span className="text-[#1a56db]">*</span>
+          <label htmlFor="pf-city" className={labelBase}>
+            City &amp; State <span className="text-vertex-accent">*</span>
           </label>
           <input
+            id="pf-city"
             {...register("city")}
             placeholder="e.g. Hyderabad, Telangana"
-            className={cn(inputBase, errors.city ? "border-red-500/60" : "border-[#1e1e1e]")}
+            className={cn(inputBase, errors.city ? "border-red-500/60" : "border-vertex-border")}
           />
           {errors.city && (
             <p className="mt-1.5 text-xs text-red-400">{errors.city.message}</p>
           )}
         </div>
         <div>
-          <label className={labelBase}>
-            Phone Number <span className="text-[#1a56db]">*</span>
+          <label htmlFor="pf-phone" className={labelBase}>
+            Phone Number <span className="text-vertex-accent">*</span>
           </label>
           <input
+            id="pf-phone"
             {...register("phone")}
             type="tel"
             placeholder="+91 XXXXX XXXXX"
-            className={cn(inputBase, errors.phone ? "border-red-500/60" : "border-[#1e1e1e]")}
+            className={cn(inputBase, errors.phone ? "border-red-500/60" : "border-vertex-border")}
           />
           {errors.phone && (
             <p className="mt-1.5 text-xs text-red-400">{errors.phone.message}</p>
@@ -148,29 +152,31 @@ export default function PartnershipForm() {
       {/* Email + Partnership type */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
-          <label className={labelBase}>
-            Email Address <span className="text-[#1a56db]">*</span>
+          <label htmlFor="pf-email" className={labelBase}>
+            Email Address <span className="text-vertex-accent">*</span>
           </label>
           <input
+            id="pf-email"
             {...register("email")}
             type="email"
             placeholder="you@company.com"
-            className={cn(inputBase, errors.email ? "border-red-500/60" : "border-[#1e1e1e]")}
+            className={cn(inputBase, errors.email ? "border-red-500/60" : "border-vertex-border")}
           />
           {errors.email && (
             <p className="mt-1.5 text-xs text-red-400">{errors.email.message}</p>
           )}
         </div>
         <div>
-          <label className={labelBase}>
-            Partnership Type <span className="text-[#1a56db]">*</span>
+          <label htmlFor="pf-partnershipType" className={labelBase}>
+            Partnership Type <span className="text-vertex-accent">*</span>
           </label>
           <select
+            id="pf-partnershipType"
             {...register("partnershipType")}
             className={cn(
               inputBase,
               "cursor-pointer appearance-none",
-              errors.partnershipType ? "border-red-500/60" : "border-[#1e1e1e]"
+              errors.partnershipType ? "border-red-500/60" : "border-vertex-border"
             )}
           >
             <option value="" disabled>
@@ -190,17 +196,18 @@ export default function PartnershipForm() {
 
       {/* Business description */}
       <div>
-        <label className={labelBase}>
-          About Your Business <span className="text-[#1a56db]">*</span>
+        <label htmlFor="pf-businessDescription" className={labelBase}>
+          About Your Business <span className="text-vertex-accent">*</span>
         </label>
         <textarea
+          id="pf-businessDescription"
           {...register("businessDescription")}
           rows={3}
           placeholder="Describe your current business activities, market presence, and industry focus…"
           className={cn(
             inputBase,
             "resize-none",
-            errors.businessDescription ? "border-red-500/60" : "border-[#1e1e1e]"
+            errors.businessDescription ? "border-red-500/60" : "border-vertex-border"
           )}
         />
         {errors.businessDescription && (
@@ -210,29 +217,33 @@ export default function PartnershipForm() {
 
       {/* Products of interest */}
       <div>
-        <label className={labelBase}>Products / Lines of Interest</label>
+        <label htmlFor="pf-productsOfInterest" className={labelBase}>
+          Products / Lines of Interest
+        </label>
         <input
+          id="pf-productsOfInterest"
           {...register("productsOfInterest")}
           placeholder="e.g. Hydraulic Seals, Industrial Valves, Full Range"
-          className={cn(inputBase, "border-[#1e1e1e]")}
+          className={cn(inputBase, "border-vertex-border")}
         />
       </div>
 
       {/* Message */}
       <div>
-        <label className={labelBase}>Additional Information</label>
+        <label htmlFor="pf-message" className={labelBase}>Additional Information</label>
         <textarea
+          id="pf-message"
           {...register("message")}
           rows={3}
           placeholder="Anything else you'd like us to know — your geographic focus, existing customer base, current suppliers…"
-          className={cn(inputBase, "resize-none border-[#1e1e1e]")}
+          className={cn(inputBase, "resize-none border-vertex-border")}
         />
       </div>
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-[#1a56db] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#1e40af] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:min-w-[200px]"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-vertex-accent px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-vertex-accent-hover disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:min-w-[200px]"
       >
         {isSubmitting ? (
           <>

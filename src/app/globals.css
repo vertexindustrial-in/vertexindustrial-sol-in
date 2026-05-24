@@ -9,12 +9,18 @@
   /* Brand */
   --color-bg:               #0a0a0a;
   --color-surface:          #111111;
+  --color-surface-hover:    #161616;
   --color-border:           #1e1e1e;
+  --color-border-subtle:    #2a2a2a;
   --color-text-primary:     #f0f0f0;
+  --color-text-mid:         #c8c8c8;
   --color-text-secondary:   #888888;
+  --color-text-muted:       #555555;
   --color-accent:           #1a56db;
   --color-accent-hover:     #1e40af;
   --color-orange:           #ea580c;
+  --color-green:            #16a34a;
+  --color-green-hover:      #15803d;
 
   /* shadcn / Radix tokens remapped to dark industrial palette */
   --background:             #0a0a0a;
@@ -84,14 +90,54 @@
   --color-sidebar:                   var(--sidebar);
 
   /* Expose brand tokens as Tailwind utilities */
-  --color-vertex-bg:        var(--color-bg);
-  --color-vertex-surface:   var(--color-surface);
-  --color-vertex-border:    var(--color-border);
-  --color-vertex-primary:   var(--color-text-primary);
-  --color-vertex-secondary: var(--color-text-secondary);
-  --color-vertex-accent:    var(--color-accent);
-  --color-vertex-accent-hover: var(--color-accent-hover);
-  --color-vertex-orange:    var(--color-orange);
+  --color-vertex-bg:             var(--color-bg);
+  --color-vertex-surface:        var(--color-surface);
+  --color-vertex-surface-hover:  var(--color-surface-hover);
+  --color-vertex-border:         var(--color-border);
+  --color-vertex-border-subtle:  var(--color-border-subtle);
+  --color-vertex-primary:        var(--color-text-primary);
+  --color-vertex-mid:            var(--color-text-mid);
+  --color-vertex-secondary:      var(--color-text-secondary);
+  --color-vertex-muted:          var(--color-text-muted);
+  --color-vertex-accent:         var(--color-accent);
+  --color-vertex-accent-hover:   var(--color-accent-hover);
+  --color-vertex-orange:         var(--color-orange);
+  --color-vertex-green:          var(--color-green);
+  --color-vertex-green-hover:    var(--color-green-hover);
+}
+
+/* ── Light mode overrides (toggled via .light on <html>) ── */
+.light {
+  --color-bg:               #f4f4f0;
+  --color-surface:          #eaeae5;
+  --color-surface-hover:    #e0e0db;
+  --color-border:           #d0d0cb;
+  --color-border-subtle:    #b8b8b3;
+  --color-text-primary:     #111111;
+  --color-text-mid:         #333333;
+  --color-text-secondary:   #555555;
+  --color-text-muted:       #777777;
+
+  /* shadcn tokens */
+  --background:             #f4f4f0;
+  --foreground:             #111111;
+  --card:                   #eaeae5;
+  --card-foreground:        #111111;
+  --popover:                #eaeae5;
+  --popover-foreground:     #111111;
+  --secondary:              #d0d0cb;
+  --secondary-foreground:   #111111;
+  --muted:                  #d0d0cb;
+  --muted-foreground:       #555555;
+  --border:                 #d0d0cb;
+  --input:                  #d0d0cb;
+
+  /* sidebar */
+  --sidebar:                #eaeae5;
+  --sidebar-foreground:     #111111;
+  --sidebar-accent:         #d0d0cb;
+  --sidebar-accent-foreground: #111111;
+  --sidebar-border:         #d0d0cb;
 }
 
 @layer base {

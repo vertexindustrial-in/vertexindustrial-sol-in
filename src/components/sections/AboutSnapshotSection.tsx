@@ -30,7 +30,7 @@ const credentials = [
 
 export default function AboutSnapshotSection() {
   return (
-    <section className="relative border-y border-[#1e1e1e] bg-[#111111] py-20 lg:py-28 overflow-hidden">
+    <section className="relative border-y border-vertex-border bg-vertex-surface py-20 lg:py-28 overflow-hidden">
       <Image
         src="/images/shavr-ik-D5kM5x-aoZM-unsplash.jpg"
         alt=""
@@ -46,17 +46,14 @@ export default function AboutSnapshotSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
               About Vertex
             </p>
-            <h2
-              className="mb-5 text-4xl font-extrabold uppercase leading-tight text-[#f0f0f0] sm:text-5xl"
-              style={{ fontFamily: "var(--font-barlow-condensed)" }}
-            >
+            <h2 className="mb-5 text-4xl font-extrabold uppercase leading-tight text-vertex-primary sm:text-5xl">
               Industrial Expertise, Built Over Decades
             </h2>
 
-            <div className="space-y-4 text-base leading-relaxed text-[#888888]">
+            <div className="space-y-4 text-base leading-relaxed text-vertex-secondary">
               <p>
                 Vertex Industrial Solutions is built on over two decades of operational experience
                 in industrial supply and technical support, rooted in the Bellary–Vijayanagar–Koppal
@@ -76,7 +73,7 @@ export default function AboutSnapshotSection() {
 
             <Link
               href="/about"
-              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#1a56db] transition-colors hover:text-[#f0f0f0]"
+              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-vertex-accent transition-colors hover:text-vertex-primary"
             >
               About Vertex Industrial
               <ArrowRight size={14} />
@@ -96,24 +93,24 @@ export default function AboutSnapshotSection() {
               return (
                 <div
                   key={item.label}
-                  className="flex items-center gap-4 rounded-sm border border-[#1e1e1e] bg-[#0a0a0a] px-5 py-4"
+                  className="flex items-center gap-4 rounded-sm border border-vertex-border bg-vertex-bg px-5 py-4"
                 >
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                     <Icon size={15} />
                   </div>
                   <div>
-                    <div className="text-xs text-[#666]">{item.label}</div>
-                    <div className="text-sm font-semibold text-[#f0f0f0]">{item.value}</div>
+                    <div className="text-xs text-vertex-muted">{item.label}</div>
+                    <div className="text-sm font-semibold text-vertex-primary">{item.value}</div>
                   </div>
                 </div>
               );
             })}
 
             {/* Proprietor highlight */}
-            <div className="rounded-sm border border-[#1a56db]/25 bg-[#1a56db]/5 px-5 py-4">
-              <div className="mb-1 text-xs text-[#666]">Proprietor</div>
-              <div className="text-sm font-semibold text-[#f0f0f0]">H. Fareed Samdani</div>
-              <div className="mt-0.5 text-xs text-[#888888]">Ballari, Karnataka, India</div>
+            <div className="rounded-sm border border-vertex-accent/25 bg-vertex-accent/5 px-5 py-4">
+              <div className="mb-1 text-xs text-vertex-muted">Proprietor</div>
+              <div className="text-sm font-semibold text-vertex-primary">H. Fareed Samdani</div>
+              <div className="mt-0.5 text-xs text-vertex-secondary">Ballari, Karnataka, India</div>
             </div>
           </motion.div>
         </div>

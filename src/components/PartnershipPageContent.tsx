@@ -126,30 +126,30 @@ export default function PartnershipPageContent() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#0a0a0a] py-16 lg:py-20">
+      <section className="border-b border-vertex-border bg-vertex-bg py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
               Partnership &amp; Dealership
             </p>
             <h1
-              className="mb-4 max-w-4xl text-5xl font-extrabold uppercase leading-tight text-[#f0f0f0] sm:text-6xl"
+              className="mb-4 max-w-4xl text-5xl font-extrabold uppercase leading-tight text-vertex-primary sm:text-6xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               Build a Partnership with Vertex Industrial
             </h1>
-            <p className="mb-8 max-w-2xl text-base leading-relaxed text-[#888888]">
+            <p className="mb-8 max-w-2xl text-base leading-relaxed text-vertex-secondary">
               We are looking for dealers, distributors, vendors, and technical service partners
               across India. Whether you want to carry our products or supply to us, we want to hear
               from you.
             </p>
             <a
               href="#apply"
-              className="inline-flex items-center gap-2 rounded-sm bg-[#1a56db] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1e40af]"
+              className="inline-flex items-center gap-2 rounded-sm bg-vertex-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-vertex-accent-hover"
             >
               Apply Now
               <ArrowRight size={14} />
@@ -159,7 +159,7 @@ export default function PartnershipPageContent() {
       </section>
 
       {/* ── Partnership types ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#111111] py-16 lg:py-24">
+      <section className="border-b border-vertex-border bg-vertex-surface py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -168,11 +168,11 @@ export default function PartnershipPageContent() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-12"
           >
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
               Opportunities
             </p>
             <h2
-              className="text-4xl font-extrabold uppercase text-[#f0f0f0] sm:text-5xl"
+              className="text-4xl font-extrabold uppercase text-vertex-primary sm:text-5xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               Three Ways to Partner
@@ -189,36 +189,36 @@ export default function PartnershipPageContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.45, delay: i * 0.1, ease: "easeOut" }}
-                  className="rounded-sm border border-[#1e1e1e] bg-[#0a0a0a]"
+                  className="rounded-sm border border-vertex-border bg-vertex-bg"
                 >
                   {/* Header */}
-                  <div className="flex items-start gap-4 border-b border-[#1e1e1e] p-5 sm:p-6">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+                  <div className="flex items-start gap-4 border-b border-vertex-border p-5 sm:p-6">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                       <Icon size={19} />
                     </div>
                     <div>
                       <h3
-                        className="text-xl font-bold uppercase text-[#f0f0f0]"
+                        className="text-xl font-bold uppercase text-vertex-primary"
                         style={{ fontFamily: "var(--font-barlow-condensed)" }}
                       >
                         {pt.type}
                       </h3>
-                      <p className="mt-0.5 text-xs text-[#555]">{pt.audience}</p>
+                      <p className="mt-0.5 text-xs text-vertex-muted">{pt.audience}</p>
                     </div>
                   </div>
 
                   {/* Body */}
                   <div className="grid gap-6 p-5 sm:p-6 lg:grid-cols-3 lg:gap-8">
-                    <p className="text-sm leading-relaxed text-[#888888]">{pt.description}</p>
+                    <p className="text-sm leading-relaxed text-vertex-secondary">{pt.description}</p>
 
                     <div>
-                      <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-[#555]">
+                      <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-vertex-muted">
                         You Bring
                       </p>
                       <ul className="space-y-2">
                         {pt.youBring.map((item) => (
-                          <li key={item} className="flex items-start gap-2 text-sm text-[#888888]">
-                            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#888888]" />
+                          <li key={item} className="flex items-start gap-2 text-sm text-vertex-secondary">
+                            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-vertex-secondary" />
                             {item}
                           </li>
                         ))}
@@ -226,13 +226,13 @@ export default function PartnershipPageContent() {
                     </div>
 
                     <div>
-                      <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-[#555]">
+                      <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-vertex-muted">
                         We Provide
                       </p>
                       <ul className="space-y-2">
                         {pt.weProvide.map((item) => (
-                          <li key={item} className="flex items-start gap-2 text-sm text-[#888888]">
-                            <CheckCircle size={13} className="mt-0.5 shrink-0 text-[#1a56db]" />
+                          <li key={item} className="flex items-start gap-2 text-sm text-vertex-secondary">
+                            <CheckCircle size={13} className="mt-0.5 shrink-0 text-vertex-accent" />
                             {item}
                           </li>
                         ))}
@@ -247,7 +247,7 @@ export default function PartnershipPageContent() {
       </section>
 
       {/* ── Why partner with us ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#0a0a0a] py-16 lg:py-24">
+      <section className="border-b border-vertex-border bg-vertex-bg py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -256,11 +256,11 @@ export default function PartnershipPageContent() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-12"
           >
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
               The Value
             </p>
             <h2
-              className="text-4xl font-extrabold uppercase text-[#f0f0f0] sm:text-5xl"
+              className="text-4xl font-extrabold uppercase text-vertex-primary sm:text-5xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               Why Partner with Vertex
@@ -278,18 +278,18 @@ export default function PartnershipPageContent() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08, ease: "easeOut" }}
                   whileHover={{ y: -3, transition: { duration: 0.18 } }}
-                  className="rounded-sm border border-[#1e1e1e] bg-[#111111] p-5"
+                  className="rounded-sm border border-vertex-border bg-vertex-surface p-5"
                 >
-                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                     <Icon size={17} />
                   </div>
                   <h3
-                    className="mb-2 text-base font-bold uppercase text-[#f0f0f0]"
+                    className="mb-2 text-base font-bold uppercase text-vertex-primary"
                     style={{ fontFamily: "var(--font-barlow-condensed)" }}
                   >
                     {benefit.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-[#888888]">{benefit.body}</p>
+                  <p className="text-sm leading-relaxed text-vertex-secondary">{benefit.body}</p>
                 </motion.div>
               );
             })}
@@ -298,7 +298,7 @@ export default function PartnershipPageContent() {
       </section>
 
       {/* ── How it works ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#111111] py-16 lg:py-20">
+      <section className="border-b border-vertex-border bg-vertex-surface py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -307,11 +307,11 @@ export default function PartnershipPageContent() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-10"
           >
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
               The Process
             </p>
             <h2
-              className="text-4xl font-extrabold uppercase text-[#f0f0f0] sm:text-5xl"
+              className="text-4xl font-extrabold uppercase text-vertex-primary sm:text-5xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               How It Works
@@ -328,29 +328,29 @@ export default function PartnershipPageContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.1, ease: "easeOut" }}
-                  className="relative rounded-sm border border-[#1e1e1e] bg-[#0a0a0a] p-6"
+                  className="relative rounded-sm border border-vertex-border bg-vertex-bg p-6"
                 >
                   {/* Connector line (desktop only, between cards) */}
                   {i < steps.length - 1 && (
-                    <span className="absolute -right-2 top-8 z-10 hidden h-px w-4 bg-[#1e1e1e] sm:block" />
+                    <span className="absolute -right-2 top-8 z-10 hidden h-px w-4 bg-vertex-border sm:block" />
                   )}
 
                   <span
-                    className="mb-4 block text-4xl font-extrabold leading-none text-[#1a56db]/20"
+                    className="mb-4 block text-4xl font-extrabold leading-none text-vertex-accent/20"
                     style={{ fontFamily: "var(--font-barlow-condensed)" }}
                   >
                     {step.step}
                   </span>
-                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                     <Icon size={17} />
                   </div>
                   <h3
-                    className="mb-2 text-lg font-bold uppercase text-[#f0f0f0]"
+                    className="mb-2 text-lg font-bold uppercase text-vertex-primary"
                     style={{ fontFamily: "var(--font-barlow-condensed)" }}
                   >
                     {step.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-[#888888]">{step.body}</p>
+                  <p className="text-sm leading-relaxed text-vertex-secondary">{step.body}</p>
                 </motion.div>
               );
             })}
@@ -359,7 +359,7 @@ export default function PartnershipPageContent() {
       </section>
 
       {/* ── Application form ── */}
-      <section id="apply" className="bg-[#0a0a0a] py-16 lg:py-24">
+      <section id="apply" className="bg-vertex-bg py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
 
@@ -371,23 +371,23 @@ export default function PartnershipPageContent() {
               transition={{ duration: 0.55, ease: "easeOut" }}
               className="lg:col-span-2"
             >
-              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
                 Apply
               </p>
               <h2
-                className="mb-4 text-4xl font-extrabold uppercase leading-tight text-[#f0f0f0] sm:text-5xl"
+                className="mb-4 text-4xl font-extrabold uppercase leading-tight text-vertex-primary sm:text-5xl"
                 style={{ fontFamily: "var(--font-barlow-condensed)" }}
               >
                 Submit Your Application
               </h2>
-              <p className="mb-6 text-sm leading-relaxed text-[#888888]">
+              <p className="mb-6 text-sm leading-relaxed text-vertex-secondary">
                 Complete the form and we will review your application. We aim to respond within
                 2–3 business days. All applications are treated confidentially.
               </p>
 
               {/* What to expect */}
               <div className="space-y-3">
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#555]">
+                <p className="text-xs font-semibold uppercase tracking-wider text-vertex-muted">
                   What happens next
                 </p>
                 {[
@@ -396,32 +396,32 @@ export default function PartnershipPageContent() {
                   "We discuss fit, terms, and next steps",
                   "Onboarding if both sides are aligned",
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2.5 text-sm text-[#888888]">
-                    <CheckCircle size={14} className="mt-0.5 shrink-0 text-[#1a56db]" />
+                  <div key={i} className="flex items-start gap-2.5 text-sm text-vertex-secondary">
+                    <CheckCircle size={14} className="mt-0.5 shrink-0 text-vertex-accent" />
                     {item}
                   </div>
                 ))}
               </div>
 
-              <div className="mt-8 space-y-3 border-t border-[#1e1e1e] pt-6">
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#555]">
+              <div className="mt-8 space-y-3 border-t border-vertex-border pt-6">
+                <p className="text-xs font-semibold uppercase tracking-wider text-vertex-muted">
                   Prefer to call first?
                 </p>
                 <a
                   href="tel:+918147904606"
-                  className="block text-sm font-medium text-[#f0f0f0] transition-colors hover:text-[#1a56db]"
+                  className="block text-sm font-medium text-vertex-primary transition-colors hover:text-vertex-accent"
                 >
                   +91 81479 04606
                 </a>
                 <a
                   href="mailto:fareed@vertexindustrial.in"
-                  className="block text-sm font-medium text-[#f0f0f0] transition-colors hover:text-[#1a56db]"
+                  className="block text-sm font-medium text-vertex-primary transition-colors hover:text-vertex-accent"
                 >
                   fareed@vertexindustrial.in
                 </a>
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1a56db] transition-colors hover:text-[#f0f0f0]"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-vertex-accent transition-colors hover:text-vertex-primary"
                 >
                   About Vertex Industrial
                   <ArrowRight size={12} />
@@ -437,16 +437,16 @@ export default function PartnershipPageContent() {
               transition={{ duration: 0.55, delay: 0.1, ease: "easeOut" }}
               className="lg:col-span-3"
             >
-              <div className="rounded-sm border border-[#1e1e1e] bg-[#111111] p-6 sm:p-8">
-                <div className="mb-6 border-b border-[#1e1e1e] pb-5">
+              <div className="rounded-sm border border-vertex-border bg-vertex-surface p-6 sm:p-8">
+                <div className="mb-6 border-b border-vertex-border pb-5">
                   <h3
-                    className="text-2xl font-extrabold uppercase text-[#f0f0f0]"
+                    className="text-2xl font-extrabold uppercase text-vertex-primary"
                     style={{ fontFamily: "var(--font-barlow-condensed)" }}
                   >
                     Partnership Application
                   </h3>
-                  <p className="mt-1 text-sm text-[#888888]">
-                    Fields marked <span className="text-[#1a56db]">*</span> are required.
+                  <p className="mt-1 text-sm text-vertex-secondary">
+                    Fields marked <span className="text-vertex-accent">*</span> are required.
                   </p>
                 </div>
                 <PartnershipForm />

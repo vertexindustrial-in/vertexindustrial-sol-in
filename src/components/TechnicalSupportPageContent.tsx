@@ -132,23 +132,23 @@ export default function TechnicalSupportPageContent() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#0a0a0a] py-16 lg:py-20">
+      <section className="border-b border-vertex-border bg-vertex-bg py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
               Technical Support
             </p>
             <h1
-              className="mb-4 max-w-3xl text-5xl font-extrabold uppercase leading-tight text-[#f0f0f0] sm:text-6xl"
+              className="mb-4 max-w-3xl text-5xl font-extrabold uppercase leading-tight text-vertex-primary sm:text-6xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               Application-Led Technical Solutions
             </h1>
-            <p className="max-w-2xl text-base leading-relaxed text-[#888888]">
+            <p className="max-w-2xl text-base leading-relaxed text-vertex-secondary">
               We do not just supply components — we engage with your application to ensure the
               right product is selected, specified, and delivered. Our technical support covers
               seal selection, cylinder specification, valve sizing, and failure analysis for
@@ -157,7 +157,7 @@ export default function TechnicalSupportPageContent() {
             <div className="mt-7 flex flex-wrap gap-3">
               <a
                 href="tel:+918147904606"
-                className="inline-flex items-center gap-2 rounded-sm bg-[#1a56db] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#1e40af]"
+                className="inline-flex items-center gap-2 rounded-sm bg-vertex-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-vertex-accent-hover"
               >
                 <Phone size={14} />
                 Call Now
@@ -166,7 +166,7 @@ export default function TechnicalSupportPageContent() {
                 href="https://wa.me/918147904606"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-sm border border-[#2a2a2a] px-5 py-2.5 text-sm font-semibold text-[#888888] transition-colors hover:border-[#555] hover:text-[#f0f0f0]"
+                className="inline-flex items-center gap-2 rounded-sm border border-vertex-border-subtle px-5 py-2.5 text-sm font-semibold text-vertex-secondary transition-colors hover:border-vertex-muted hover:text-vertex-primary"
               >
                 <MessageCircle size={14} />
                 WhatsApp
@@ -177,7 +177,7 @@ export default function TechnicalSupportPageContent() {
       </section>
 
       {/* ── Support Areas ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#111111] py-16 lg:py-24">
+      <section className="border-b border-vertex-border bg-vertex-surface py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -186,11 +186,11 @@ export default function TechnicalSupportPageContent() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-10"
           >
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
               What We Cover
             </p>
             <h2
-              className="text-4xl font-extrabold uppercase text-[#f0f0f0] sm:text-5xl"
+              className="text-4xl font-extrabold uppercase text-vertex-primary sm:text-5xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               Four Areas of Technical Support
@@ -208,32 +208,32 @@ export default function TechnicalSupportPageContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.45, delay: i * 0.07, ease: "easeOut" }}
-                  className="grid gap-6 rounded-sm border border-[#1e1e1e] bg-[#0a0a0a] p-6 sm:p-8 lg:grid-cols-2 lg:gap-10"
+                  className="grid gap-6 rounded-sm border border-vertex-border bg-vertex-bg p-6 sm:p-8 lg:grid-cols-2 lg:gap-10"
                 >
                   {/* Left: description */}
                   <div className={isEven ? "lg:order-2" : ""}>
-                    <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+                    <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                       <Icon size={18} />
                     </div>
                     <h3
-                      className="mb-3 text-2xl font-extrabold uppercase leading-tight text-[#f0f0f0] sm:text-3xl"
+                      className="mb-3 text-2xl font-extrabold uppercase leading-tight text-vertex-primary sm:text-3xl"
                       style={{ fontFamily: "var(--font-barlow-condensed)" }}
                     >
                       {area.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-[#888888]">{area.description}</p>
+                    <p className="text-sm leading-relaxed text-vertex-secondary">{area.description}</p>
                   </div>
 
                   {/* Right: bullet points */}
                   <div className={`flex flex-col justify-center ${isEven ? "lg:order-1" : ""}`}>
-                    <div className="rounded-sm border border-[#1e1e1e] bg-[#111111] p-5">
-                      <p className="mb-3.5 text-xs font-semibold uppercase tracking-widest text-[#555]">
+                    <div className="rounded-sm border border-vertex-border bg-vertex-surface p-5">
+                      <p className="mb-3.5 text-xs font-semibold uppercase tracking-widest text-vertex-muted">
                         Scope Includes
                       </p>
                       <ul className="space-y-2.5">
                         {area.points.map((point) => (
-                          <li key={point} className="flex items-start gap-2.5 text-sm text-[#888888]">
-                            <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-[#1a56db]" />
+                          <li key={point} className="flex items-start gap-2.5 text-sm text-vertex-secondary">
+                            <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-vertex-accent" />
                             {point}
                           </li>
                         ))}
@@ -248,7 +248,7 @@ export default function TechnicalSupportPageContent() {
       </section>
 
       {/* ── How It Works ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#0a0a0a] py-16 lg:py-24">
+      <section className="border-b border-vertex-border bg-vertex-bg py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -257,16 +257,16 @@ export default function TechnicalSupportPageContent() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-10"
           >
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
               The Process
             </p>
             <h2
-              className="text-4xl font-extrabold uppercase text-[#f0f0f0] sm:text-5xl"
+              className="text-4xl font-extrabold uppercase text-vertex-primary sm:text-5xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               How Technical Support Works
             </h2>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#888888]">
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-vertex-secondary">
               A straightforward process from first enquiry to confirmed supply — with technical
               reasoning at every step.
             </p>
@@ -280,21 +280,21 @@ export default function TechnicalSupportPageContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1, ease: "easeOut" }}
-                className="flex flex-col rounded-sm border border-[#1e1e1e] bg-[#111111] p-5"
+                className="flex flex-col rounded-sm border border-vertex-border bg-vertex-surface p-5"
               >
                 <span
-                  className="mb-3 text-4xl font-extrabold tabular-nums text-[#1a56db]/30"
+                  className="mb-3 text-4xl font-extrabold tabular-nums text-vertex-accent/30"
                   style={{ fontFamily: "var(--font-barlow-condensed)" }}
                 >
                   {step.step}
                 </span>
                 <h3
-                  className="mb-2 text-lg font-bold uppercase leading-snug text-[#f0f0f0]"
+                  className="mb-2 text-lg font-bold uppercase leading-snug text-vertex-primary"
                   style={{ fontFamily: "var(--font-barlow-condensed)" }}
                 >
                   {step.title}
                 </h3>
-                <p className="flex-1 text-sm leading-relaxed text-[#888888]">{step.body}</p>
+                <p className="flex-1 text-sm leading-relaxed text-vertex-secondary">{step.body}</p>
               </motion.div>
             ))}
           </div>
@@ -302,7 +302,7 @@ export default function TechnicalSupportPageContent() {
       </section>
 
       {/* ── Use Cases ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#111111] py-16 lg:py-24">
+      <section className="border-b border-vertex-border bg-vertex-surface py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -311,11 +311,11 @@ export default function TechnicalSupportPageContent() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-10"
           >
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
               When to Reach Out
             </p>
             <h2
-              className="text-4xl font-extrabold uppercase text-[#f0f0f0] sm:text-5xl"
+              className="text-4xl font-extrabold uppercase text-vertex-primary sm:text-5xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               Common Support Scenarios
@@ -330,18 +330,18 @@ export default function TechnicalSupportPageContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.38, delay: i * 0.07, ease: "easeOut" }}
-                className="rounded-sm border border-[#1e1e1e] bg-[#0a0a0a] p-5"
+                className="rounded-sm border border-vertex-border bg-vertex-bg p-5"
               >
                 <div className="mb-2 flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#1a56db]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-vertex-accent" />
                   <h3
-                    className="text-base font-bold uppercase text-[#f0f0f0]"
+                    className="text-base font-bold uppercase text-vertex-primary"
                     style={{ fontFamily: "var(--font-barlow-condensed)" }}
                   >
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed text-[#888888]">{item.detail}</p>
+                <p className="text-sm leading-relaxed text-vertex-secondary">{item.detail}</p>
               </motion.div>
             ))}
           </div>
@@ -349,7 +349,7 @@ export default function TechnicalSupportPageContent() {
       </section>
 
       {/* ── Why This Matters ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#0a0a0a] py-16 lg:py-24">
+      <section className="border-b border-vertex-border bg-vertex-bg py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-20">
 
@@ -359,19 +359,19 @@ export default function TechnicalSupportPageContent() {
               viewport={{ once: true }}
               transition={{ duration: 0.55, ease: "easeOut" }}
             >
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                 <Wrench size={18} />
               </div>
-              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#1a56db]">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-vertex-accent">
                 Our Approach
               </p>
               <h2
-                className="mb-5 text-4xl font-extrabold uppercase leading-tight text-[#f0f0f0] sm:text-5xl"
+                className="mb-5 text-4xl font-extrabold uppercase leading-tight text-vertex-primary sm:text-5xl"
                 style={{ fontFamily: "var(--font-barlow-condensed)" }}
               >
                 Technical Matching Over Catalogue Selling
               </h2>
-              <div className="space-y-4 text-sm leading-relaxed text-[#888888]">
+              <div className="space-y-4 text-sm leading-relaxed text-vertex-secondary">
                 <p>
                   Most industrial component failures are not caused by poor quality — they are
                   caused by wrong selection. A seal in the correct material and profile for its
@@ -427,15 +427,15 @@ export default function TechnicalSupportPageContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.35, delay: i * 0.08 }}
-                  className="rounded-sm border border-[#1e1e1e] bg-[#111111] p-5"
+                  className="rounded-sm border border-vertex-border bg-vertex-surface p-5"
                 >
                   <p
-                    className="mb-1.5 text-sm font-bold uppercase text-[#f0f0f0]"
+                    className="mb-1.5 text-sm font-bold uppercase text-vertex-primary"
                     style={{ fontFamily: "var(--font-barlow-condensed)" }}
                   >
                     {item.label}
                   </p>
-                  <p className="text-sm leading-relaxed text-[#888888]">{item.value}</p>
+                  <p className="text-sm leading-relaxed text-vertex-secondary">{item.value}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -444,7 +444,7 @@ export default function TechnicalSupportPageContent() {
       </section>
 
       {/* ── Products cross-reference ── */}
-      <section className="border-b border-[#1e1e1e] bg-[#111111] py-16 lg:py-20">
+      <section className="border-b border-vertex-border bg-vertex-surface py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -454,12 +454,12 @@ export default function TechnicalSupportPageContent() {
             className="mb-8"
           >
             <h2
-              className="text-3xl font-extrabold uppercase text-[#f0f0f0] sm:text-4xl"
+              className="text-3xl font-extrabold uppercase text-vertex-primary sm:text-4xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               Products We Support
             </h2>
-            <p className="mt-2 text-sm text-[#888888]">
+            <p className="mt-2 text-sm text-vertex-secondary">
               Technical support is available across all three of our core product lines.
             </p>
           </motion.div>
@@ -478,17 +478,17 @@ export default function TechnicalSupportPageContent() {
                 >
                   <Link
                     href={product.href}
-                    className="group flex items-center justify-between rounded-sm border border-[#1e1e1e] bg-[#0a0a0a] px-5 py-4 transition-colors hover:border-[#1a56db]/40"
+                    className="group flex items-center justify-between rounded-sm border border-vertex-border bg-vertex-bg px-5 py-4 transition-colors hover:border-vertex-accent/40"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#1a56db]/10 text-[#1a56db]">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-vertex-accent/10 text-vertex-accent">
                         <Icon size={16} />
                       </div>
-                      <span className="text-sm font-semibold text-[#f0f0f0]">{product.name}</span>
+                      <span className="text-sm font-semibold text-vertex-primary">{product.name}</span>
                     </div>
                     <ArrowRight
                       size={14}
-                      className="shrink-0 text-[#333] transition-colors group-hover:text-[#1a56db]"
+                      className="shrink-0 text-vertex-muted transition-colors group-hover:text-vertex-accent"
                     />
                   </Link>
                 </motion.div>
@@ -499,7 +499,7 @@ export default function TechnicalSupportPageContent() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#0a0a0a] py-16 lg:py-20">
+      <section className="bg-vertex-bg py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -510,12 +510,12 @@ export default function TechnicalSupportPageContent() {
           >
             <div>
               <h2
-                className="text-3xl font-extrabold uppercase text-[#f0f0f0] sm:text-4xl"
+                className="text-3xl font-extrabold uppercase text-vertex-primary sm:text-4xl"
                 style={{ fontFamily: "var(--font-barlow-condensed)" }}
               >
                 Describe Your Application
               </h2>
-              <p className="mt-1 max-w-md text-sm text-[#888888]">
+              <p className="mt-1 max-w-md text-sm text-vertex-secondary">
                 Call, WhatsApp, or send an enquiry — we will come back with a specific
                 recommendation, not a catalogue.
               </p>
@@ -523,14 +523,14 @@ export default function TechnicalSupportPageContent() {
             <div className="flex flex-wrap gap-3 shrink-0">
               <a
                 href="tel:+918147904606"
-                className="inline-flex items-center gap-2 rounded-sm bg-[#1a56db] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#1e40af]"
+                className="inline-flex items-center gap-2 rounded-sm bg-vertex-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-vertex-accent-hover"
               >
                 <Phone size={14} />
                 +91 81479 04606
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-sm border border-[#2a2a2a] px-5 py-2.5 text-sm font-semibold text-[#888888] transition-colors hover:border-[#555] hover:text-[#f0f0f0]"
+                className="inline-flex items-center gap-2 rounded-sm border border-vertex-border-subtle px-5 py-2.5 text-sm font-semibold text-vertex-secondary transition-colors hover:border-vertex-muted hover:text-vertex-primary"
               >
                 Send Enquiry
                 <ArrowRight size={14} />

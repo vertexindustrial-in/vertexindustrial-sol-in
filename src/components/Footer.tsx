@@ -18,7 +18,7 @@ const companyLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#1e1e1e] bg-[#111111]">
+    <footer className="border-t border-vertex-border bg-vertex-surface">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
 
@@ -33,7 +33,7 @@ export default function Footer() {
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="text-sm text-[#888888] leading-relaxed max-w-xs">
+            <p className="text-sm text-vertex-secondary leading-relaxed max-w-xs">
               Industrial supply and technical solutions firm serving steel plants,
               rolling mills, and heavy industries across the Bellary–Vijayanagar–Koppal belt.
             </p>
@@ -43,7 +43,7 @@ export default function Footer() {
               href="https://wa.me/918147904606"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center gap-2 rounded-sm bg-[#16a34a] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#15803d]"
+              className="mt-5 inline-flex items-center gap-2 rounded-sm bg-vertex-green px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-vertex-green-hover"
             >
               <MessageCircle size={16} />
               WhatsApp Us
@@ -52,10 +52,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3
-              className="mb-4 text-xs font-semibold uppercase tracking-widest text-[#888888]"
-              style={{ fontFamily: "var(--font-barlow-condensed)" }}
-            >
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-vertex-secondary">
               Products
             </h3>
             <ul className="space-y-2.5">
@@ -63,7 +60,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#888888] transition-colors hover:text-[#f0f0f0]"
+                    className="text-sm text-vertex-secondary transition-colors hover:text-vertex-primary"
                   >
                     {link.label}
                   </Link>
@@ -74,10 +71,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3
-              className="mb-4 text-xs font-semibold uppercase tracking-widest text-[#888888]"
-              style={{ fontFamily: "var(--font-barlow-condensed)" }}
-            >
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-vertex-secondary">
               Company
             </h3>
             <ul className="space-y-2.5">
@@ -85,7 +79,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#888888] transition-colors hover:text-[#f0f0f0]"
+                    className="text-sm text-vertex-secondary transition-colors hover:text-vertex-primary"
                   >
                     {link.label}
                   </Link>
@@ -96,34 +90,31 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3
-              className="mb-4 text-xs font-semibold uppercase tracking-widest text-[#888888]"
-              style={{ fontFamily: "var(--font-barlow-condensed)" }}
-            >
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-vertex-secondary">
               Contact
             </h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="tel:+918147904606"
-                  className="flex items-start gap-2.5 text-sm text-[#888888] transition-colors hover:text-[#f0f0f0]"
+                  className="flex items-start gap-2.5 text-sm text-vertex-secondary transition-colors hover:text-vertex-primary"
                 >
-                  <Phone size={15} className="mt-0.5 shrink-0 text-[#1a56db]" />
+                  <Phone size={15} className="mt-0.5 shrink-0 text-vertex-accent" />
                   +91 81479 04606
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:fareed@vertexindustrial.in"
-                  className="flex items-start gap-2.5 text-sm text-[#888888] transition-colors hover:text-[#f0f0f0]"
+                  className="flex items-start gap-2.5 text-sm text-vertex-secondary transition-colors hover:text-vertex-primary"
                 >
-                  <Mail size={15} className="mt-0.5 shrink-0 text-[#1a56db]" />
+                  <Mail size={15} className="mt-0.5 shrink-0 text-vertex-accent" />
                   fareed@vertexindustrial.in
                 </a>
               </li>
               <li>
-                <span className="flex items-start gap-2.5 text-sm text-[#888888]">
-                  <MapPin size={15} className="mt-0.5 shrink-0 text-[#1a56db]" />
+                <span className="flex items-start gap-2.5 text-sm text-vertex-secondary">
+                  <MapPin size={15} className="mt-0.5 shrink-0 text-vertex-accent" />
                   <span>
                     SY No. 464/B and 464/1, D Block,<br />
                     Belagal Tanda Road, Belagal Village,<br />
@@ -136,16 +127,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-[#1e1e1e] pt-6 sm:flex-row">
-          <p className="text-xs text-[#888888]">
+        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-vertex-border pt-6 sm:flex-row">
+          <p className="text-xs text-vertex-secondary">
             © {new Date().getFullYear()} Vertex Industrial Solutions. All rights reserved.
           </p>
-          <p className="text-xs text-[#888888]">
+          <p className="text-xs text-vertex-secondary">
             Ballari, Karnataka, India
           </p>
         </div>
       </div>
-
     </footer>
   );
 }
