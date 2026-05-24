@@ -153,12 +153,12 @@ export default function IndustriesPageContent() {
               Industries Served
             </p>
             <h1
-              className="mb-4 max-w-3xl text-5xl font-extrabold uppercase leading-tight text-vertex-primary sm:text-6xl"
+              className="mb-4 max-w-3xl text-5xl font-extrabold uppercase leading-tight text-[#f0f0f0] sm:text-6xl"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
               Built for Demanding Industrial Environments
             </h1>
-            <p className="max-w-2xl text-base leading-relaxed text-vertex-secondary">
+            <p className="max-w-2xl text-base leading-relaxed text-[#888888]">
               We serve steel plants, rolling mills, process industries, maintenance contractors, and
               allied engineering units — with a primary focus on the Bellary–Vijayanagar–Koppal
               industrial belt in Karnataka.
